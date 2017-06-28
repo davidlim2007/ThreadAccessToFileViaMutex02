@@ -1,0 +1,6 @@
+D:\David\Programming\C#\ThreadAccessToFileViaMutex02\bin\Debug\ThreadAccessToFileViaMutex02.exe.config
+D:\David\Programming\C#\ThreadAccessToFileViaMutex02\bin\Debug\ThreadAccessToFileViaMutex02.exe
+D:\David\Programming\C#\ThreadAccessToFileViaMutex02\bin\Debug\ThreadAccessToFileViaMutex02.pdb
+D:\David\Programming\C#\ThreadAccessToFileViaMutex02\obj\Debug\ThreadAccessToFileViaMutex02.csprojResolveAssemblyReference.cache
+D:\David\Programming\C#\ThreadAccessToFileViaMutex02\obj\Debug\ThreadAccessToFileViaMutex02.exe
+D:\David\Programming\C#\ThreadAccessToFileViaMutex02\obj\Debug\ThreadAccessToFileViaMutex02.pdb
