@@ -35,6 +35,8 @@ namespace ThreadAccessToFileViaMutex02
         // threads.
         private static void ThreadMethod()
         {
+            AcquireFileMutex();
+
             try
             {
                 // Each thread will perform the following:
@@ -62,7 +64,6 @@ namespace ThreadAccessToFileViaMutex02
                 // ownership of the mutex upon first running, and will
                 // not release it until it ends. Hence each thread will
                 // have full access to the file at runtime.
-                AcquireFileMutex();
 
                 for (int i = 0; i < 10; i++)
                 {                    
@@ -70,8 +71,6 @@ namespace ThreadAccessToFileViaMutex02
                         + Convert.ToString(Thread.CurrentThread.ManagedThreadId)
                         + " has the Mutex.\r\n");
                 }
-
-                ReleaseFileMutex();
             }
             catch (Exception ex)
             {
@@ -80,7 +79,15 @@ namespace ThreadAccessToFileViaMutex02
             }
             finally
             {
-
+                // Mutex is released in the "finally"
+                // block to guarantee that the Mutex is
+                // released upon thread completion.
+                //
+                // Therefore even if an Exception occurs
+                // during the running of this thread, we
+                // can be assured that the Mutex will be
+                // released upon completion of this thread.
+                ReleaseFileMutex();
             }
         }
 
